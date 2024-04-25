@@ -1,7 +1,23 @@
-*,
+/*,
 *::before,
 *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.container{
+  width: 500px;  
+  height: 200px;
+  padding-block: 100px;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+  transition: 0.25;
+   background-color: aqua;
+  color: #676767; 
 }
