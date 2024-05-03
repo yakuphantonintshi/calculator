@@ -10,7 +10,7 @@
     --primary: black;
     --secondary: rgb(255, 255, 255);
     --alternative: #e30cbb;
-    --awesome: hsl(354, 60%, 50%);
+    --awesome: hsl(192, 60%, 50%);
     --mainBoxShadoow: .5vw .5vw .3vw var(--alternative);
     --borderColor: #787778;
     --elementShadow: .2vw .3vw .2vw rgb(120, 108, 108);
