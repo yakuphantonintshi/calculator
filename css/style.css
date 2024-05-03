@@ -1,30 +1,57 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: black;
+    --secondary: rgb(255, 255, 255);
+    --alternative: #e30cbb;
+    --awesome: hsl(192, 60%, 50%);
+    --mainBoxShadoow: .5vw .5vw .3vw var(--alternative);
+    --borderColor: #787778;
+    --elementShadow: .2vw .3vw .2vw rgb(120, 108, 108);
+}
 body{
-    background-color: rgb(red, green, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.241);
+
 }
 .container{
-    margin: 160px 0 0 200px;
-}
-.row{
-    width: 100%;
-    height: 60px;
-}
-button{
-    color: black;
-    width: 55px;
-    height: 55px; 
-    border: none;
-    background: rgb(214,214,214);
-    box-shadow: 5px 5px 10px #036e6e, -5px -5px 10px #789;
-    font-size: 20px;
-    margin-left: 5px;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif ;
-}
+    width: 20rem;
+    aspect-ratio: 2/ 3;
+    box-shadow: var(--mainBoxShadoow);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
 
-button:active{
- box-shadow: 1px 1px 2px #444, -1px -1px 2px #942;
 }
-.back{
-    width: 115px;
-    border-radius: 10px ;
+.container :first-child {
+    grid-column: 1 / -1;
 }
+.container :last-child{
+    grid-column: 1 / -1;
+}
+input[data-output]{
+    text-align: right;
+}
+:is(button, input){
+box-shadow: var(--elementsShadow);
+font-weight: bolder;
+font-size: 1.1rem;
+transition: all 1s;
+&:hover{
+    box-shadow: unset;
+    border: 2px solid var(--awesome);
+}
+}
+ button[data-operator]{
+    background-color: var(--awesome);
+ }
